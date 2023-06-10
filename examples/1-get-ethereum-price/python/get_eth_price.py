@@ -25,12 +25,28 @@ async def get_price():
     # and create the instance the instance like this:
     # async with BlockchainAPIs(api_key) as blockchain_apis:
     async with BlockchainAPIs() as blockchain_apis:
-        amount_out = await blockchain_apis.amount_out(
+        amount_outs = await blockchain_apis.amount_out(
             blockchain=BLOCKCHAIN,
             tokenIn=TOKEN_IN,
             tokenOut=TOKEN_OUT,
             amountIn=AMOUNT_IN
         )
-        print(amount_out)
+        print("=======================")
+        # We loop to get all of the results
+        for amount_out in amount_outs:
+            # The blockchain
+            print(f"Blockchain: {amount_out.blockchain}")
+            # The id of the exchange
+            print(f"Exchange: {amount_out.exchange}")
+            # The address of the token that we sell
+            print(f"tokenIn: {amount_out.tokenIn}")
+            # The address of the token that we buy
+            print(f"tokenOut: {amount_out.tokenOut}")
+            # The amount of tokenIn that we sell
+            print(f"amountIn: {amount_out.amountIn}")
+            # The amount of tokenOut that we get after selling amountIn tokenIn
+            print(f"amountOut: {amount_out.amountOut}")
+            print("=======================")
+
 
 asyncio.run(get_price())
