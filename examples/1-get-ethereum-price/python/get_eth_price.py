@@ -19,18 +19,18 @@ TOKEN_OUT = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
 AMOUNT_IN = 1 * 10**18
 
 async def get_price():
-    blockchain_apis = BlockchainAPIs()
-    # You can also get an API key at:
-    # https://dashboard.blockchainapis.io
-    # An create it this way:
-    # blockchain_apis = BlockchainAPIs(api_key)
-    amount_out = await blockchain_apis.amount_out(
-        blockchain=BLOCKCHAIN,
-        tokenIn=TOKEN_IN,
-        tokenOut=TOKEN_OUT,
-        amountIn=AMOUNT_IN
-    )
-    print(amount_out)
-    await blockchain_apis.close()
+    # Create the blockchain APIs instance that will automatically
+    # free its resources.
+    # You can also get an API key for free at: https://dashboard.blockchainapis.io
+    # and create the instance the instance like this:
+    # async with BlockchainAPIs(api_key) as blockchain_apis:
+    async with BlockchainAPIs() as blockchain_apis:
+        amount_out = await blockchain_apis.amount_out(
+            blockchain=BLOCKCHAIN,
+            tokenIn=TOKEN_IN,
+            tokenOut=TOKEN_OUT,
+            amountIn=AMOUNT_IN
+        )
+        print(amount_out)
 
 asyncio.run(get_price())
