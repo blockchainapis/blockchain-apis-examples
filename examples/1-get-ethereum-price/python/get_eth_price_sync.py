@@ -1,6 +1,10 @@
 from blockchainapis import BlockchainAPIsSync
 
 blockchain_apis = BlockchainAPIsSync()
+# You can also get an API key at:
+# https://dashboard.blockchainapis.io
+# An create it this way:
+# blockchain_apis = BlockchainAPIsSync(api_key)
 
 amount_out = blockchain_apis.amount_out(
     # The blockchain on which you want the exchange to take place

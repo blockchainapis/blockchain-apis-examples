@@ -20,6 +20,10 @@ AMOUNT_IN = 1 * 10**18
 
 async def get_price():
     blockchain_apis = BlockchainAPIs()
+    # You can also get an API key at:
+    # https://dashboard.blockchainapis.io
+    # An create it this way:
+    # blockchain_apis = BlockchainAPIs(api_key)
     amount_out = await blockchain_apis.amount_out(
         blockchain=BLOCKCHAIN,
         tokenIn=TOKEN_IN,
