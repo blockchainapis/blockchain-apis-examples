@@ -9,3 +9,23 @@ better performance.
 
 If you already have a Python project and you don't want to bother with
 async Python, you can use the [sync](get_eth_price_sync.py) version.
+
+## To run the test
+
+### Install the dependencies:
+
+```python
+pip install -r requirements.txt
+```
+
+### Run any of the two instances:
+
+_Sync:_
+```bash
+python get_eth_price_sync.py
+```
+
+_Async:_
+```bash
+python get_eth_price.py
+```
