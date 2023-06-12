@@ -2,7 +2,7 @@ import asyncio
 
 from blockchainapis import BlockchainAPIs
 
-# We create an Async function because we can't use async in the main Python thread
+# We need to create an async function, because we can't do async calls in main Python thread.
 async def get_blockchains():
     # Create the Blockchain APIs instance that allow us to interact with
     # Blockchain APIs.
