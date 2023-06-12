@@ -10,7 +10,7 @@ better performance.
 If you already have a Python project and you don't want to bother with
 async Python, you can use the [sync](get_eth_price_sync.py) version.
 
-## To run the test
+## To run the example
 
 ### Install the dependencies:
 
