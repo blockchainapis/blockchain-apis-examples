@@ -5,5 +5,9 @@ In blockchain APIs, each blockchain have a unique ID, you need this ID in order 
 Here is the result of what you can get after executing this example:
 
 ```
-
+- arbitrum
+- avalanche
+- bsc
+- ethereum
+- polygon
 ```
