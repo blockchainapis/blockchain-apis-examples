@@ -7,3 +7,6 @@ blockchain_apis = BlockchainAPIsSync()
 # blockchain_apis = BlockchainAPIsSync(api_key)
 
 blockchains = blockchain_apis.blockchains()
+
+for blockchain in blockchains:
+    print(f"- {blockchain.blockchain}")
