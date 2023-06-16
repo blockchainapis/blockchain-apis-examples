@@ -1,1 +1,1 @@
-blockchain-apis >= 0.1.4
+blockchain-apis >= 0.2.0
