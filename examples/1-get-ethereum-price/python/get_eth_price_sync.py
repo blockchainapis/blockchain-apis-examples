@@ -6,7 +6,8 @@ blockchain_apis = BlockchainAPIsSync()
 # An create the instance this way:
 # blockchain_apis = BlockchainAPIsSync(api_key)
 
-amount_out = blockchain_apis.amount_out(
+# Do an API call in order to get the amount out
+amount_outs = blockchain_apis.amount_out(
     # The blockchain on which you want the exchange to take place
     blockchain="ethereum",
     # The address of the token that we sell, here it is WETH address
@@ -19,4 +20,19 @@ amount_out = blockchain_apis.amount_out(
     amountIn=1 * 10**18
 )
 
-print(amount_out)
+print("=======================")
+# We loop to get all of the results
+for amount_out in amount_outs:
+    # The blockchain
+    print(f"Blockchain: {amount_out.blockchain}")
+    # The id of the exchange
+    print(f"Exchange: {amount_out.exchange}")
+    # The address of the token that we sell
+    print(f"tokenIn: {amount_out.tokenIn}")
+    # The address of the token that we buy
+    print(f"tokenOut: {amount_out.tokenOut}")
+    # The amount of tokenIn that we sell
+    print(f"amountIn: {amount_out.amountIn}")
+    # The amount of tokenOut that we get after selling amountIn tokenIn
+    print(f"amountOut: {amount_out.amountOut}")
+    print("=======================")

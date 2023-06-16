@@ -27,5 +27,4 @@ async def handle_throw(blockchain_id: str, api_key: str | None = None):
             print(f"Got an exception that is not related to Blockchain APIs:", e)
 
 asyncio.run(handle_throw("invalid_blockchain_id"))
-print("==========================================================")
 asyncio.run(handle_throw("ethereum", "invalid_api_key"))
