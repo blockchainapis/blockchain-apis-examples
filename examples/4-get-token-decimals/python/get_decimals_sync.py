@@ -19,6 +19,6 @@ BLOCKCHAIN = "ethereum"
 TARGET_TOKEN = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
 
 # Make a call to Blockchain APIs in order to get the decimals.
-decimals = blockchain_apis.decimals(BLOCKCHAIN, TARGET_TOKEN)
+decimals = blockchain_apis.decimals(blockchain=BLOCKCHAIN, token=TARGET_TOKEN)
 
 print(f"Token at address {TARGET_TOKEN} have {decimals} decimals.")

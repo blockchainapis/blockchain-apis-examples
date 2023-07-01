@@ -21,7 +21,8 @@ async def get_decimals(blockchain: str, token: str):
     # async with BlockchainAPIs(API_KEY) as blockchain_apis:
     async with BlockchainAPIs() as blockchain_apis:
         # Make the call to blockchain_apis
-        token_decimals = await blockchain_apis.decimals(blockchain, token)
+        token_decimals = await blockchain_apis.decimals(blockchain=blockchain, token=token)
+
         print(f"Token at address {token} have {token_decimals} decimals.")
 
 asyncio.run(get_decimals(BLOCKCHAIN, TARGET_TOKEN))
