@@ -24,7 +24,7 @@ async def get_decimal_form(blockchain: str, token: str, amount: int, name: str):
         # Get the decimals of the token
         decimals = await blockchain_apis.decimals(blockchain, token)
         # Get the decimal form of the token from the amount of decimals
-        decimal_form = blockchain_apis.get_token_decimal_form(amount, decimals)
+        decimal_form = blockchain_apis.get_token_decimal_form(amount=amount, decimals=decimals)
         print(f"{amount} {token} in decimal is: {decimal_form} {name}")
 
 async def to_unsigned_form(blockchain: str, token: str, decimal_amount: str, name: str):
@@ -43,7 +43,7 @@ async def to_unsigned_form(blockchain: str, token: str, decimal_amount: str, nam
         # Get the amount of decimals that the token has
         decimals = await blockchain_apis.decimals(blockchain, token)
         # Get the unsigned integer form of the token from the amount of decimals
-        unsigned_form = blockchain_apis.get_token_unsigned_form(decimal_amount, decimals)
+        unsigned_form = blockchain_apis.get_token_unsigned_form(amount=decimal_amount, decimals=decimals)
         print(f"{decimal_amount} {name} in unsigned integer form is: {unsigned_form} {token}")
 
 asyncio.run(get_decimal_form("ethereum", "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", 2450000000000000000, "WETH"))
