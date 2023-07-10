@@ -24,6 +24,7 @@ async def get_exchanges():
     # and create a more performant instance like this:
     # async with BlockchainAPIs(API_KEY) as blockchain_apis:
     async with BlockchainAPIs() as blockchain_apis:
+        # Get the list of available exchanges for all of the blockchains
         exchanges = await blockchain_apis.exchanges()
         # TIP: You can select a specific blockchain by doing the following:
         # exchanges = await blockchain_apis.exchanges(blockchain="ethereum")
