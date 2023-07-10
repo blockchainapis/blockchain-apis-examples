@@ -10,6 +10,7 @@ In this example, you will learn how you can use [Blockchain APIs](https://www.bl
 to get the list of available DEX for any blockchain.
 
 At the end of this tutorial, it should print in the terminal:
+
 | Exchange ID               | Blockchain ID   | Exchange Name   | Exchange URL                                  |
 | ------------------------- | --------------- | --------------- | --------------------------------------------- |
 | dooar_bsc                 | bsc             | DOOAR           | https://dooar.com                             |
