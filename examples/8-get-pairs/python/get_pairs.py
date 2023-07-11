@@ -22,7 +22,7 @@ async def get_pairs():
         print(f"Total pages: {pairs.total_pages}")
         # TIP: You can choose which page you want to get by doing the following:
         # pairs = await blockchain_apis.pairs(page=2)
-        
+
         # Now we get the first pair available:
         pair = pairs.data[0]
         print("First pair:")
@@ -36,6 +36,7 @@ async def get_pairs():
         print(f"Token0 of pair: {pair.token0}")
         print(f"Token1 of pair: {pair.token1}")
         # The fee taken by liquidity providers during a trade
+        # The fee is written in 100000 of percents (for example: 1000 is 1%)
         print(f"fee: {pair.fee}")
 
 asyncio.run(get_pairs())
