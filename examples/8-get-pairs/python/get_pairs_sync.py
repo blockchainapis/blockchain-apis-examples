@@ -16,7 +16,7 @@ print(f"Current page: {pairs.page}")
 # We print the total amount of pages:
 print(f"Total pages: {pairs.total_pages}")
 # TIP: You can choose which page you want to get by doing the following:
-# pairs = await blockchain_apis.pairs(page=2)
+# pairs = blockchain_apis.pairs(page=2)
 
 # Now we get the first pair available:
 pair = pairs.data[0]
