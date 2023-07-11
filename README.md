@@ -3,6 +3,8 @@
 The goal of this repository is to show you examples of how you can interact with [Blockchain APIs](https://www.blockchainapis.io) using the SDK.
 This way you can get started fast.
 
+**Please note**: You don't need an API key to run code from this repository, feel free to clone it and experiment without API key.
+
 ## How to use the repository
 
 In order to use the repository, you should first clone it:
