@@ -15,9 +15,8 @@ async def get_pairs():
         pairs = await blockchain_apis.pairs()
         # TIP: You can specify a specific blockchain id by doing the folowing:
         # pairs = await blockchain_apis.pairs(blockchain="ethereum")
-        print(pairs)
-        # There are 100 results per page
-        # by default we start at page 1
+
+        # There are 100 results per page by default we start at page 1
         print(f"Current page: {pairs.page}")
         # We print the total amount of pages:
         print(f"Total pages: {pairs.total_pages}")
