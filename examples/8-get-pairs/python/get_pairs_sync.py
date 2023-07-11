@@ -6,6 +6,7 @@ blockchain_apis = BlockchainAPIsSync()
 # An create the instance this way:
 # blockchain_apis = BlockchainAPIsSync(api_key)
 
+# Get pairs for every blockchain
 pairs = blockchain_apis.pairs()
 # TIP: You can specify a specific blockchain id by doing the folowing:
 # pairs = blockchain_apis.pairs(blockchain="ethereum")

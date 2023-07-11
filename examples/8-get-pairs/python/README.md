@@ -27,4 +27,3 @@ _Async:_
 ```bash
 python get_pairs.py
 ```
-
