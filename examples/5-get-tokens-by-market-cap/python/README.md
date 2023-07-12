@@ -9,6 +9,9 @@ better performance.
 If you already have a Python project and you don't want to bother with
 async Python, you can use the [sync](get_tokens_market_cap_sync.py) version.
 
+In our examples, we will get the list then search through the list in order to
+find the market cap of WETH and WBTC on the blockchain Ethereum.
+
 ## To run the example
 
 ### Install the dependencies:
