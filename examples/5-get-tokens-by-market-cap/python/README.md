@@ -30,9 +30,9 @@ Please note some tokens have a weird market cap:
 - 0x50243F43D40AeFE1dbC138EE9BBD5368AC9A47d8
 
 This is because in order to compute the market cap, Blockchain APIs uses the following method:
-1) Remove all tokens that have a liquidity lower than 25000 USDT
-2) Compute the value of the token in USDT
-3) Multiply this value by the total supply of tokens
+1. Remove all tokens that have a liquidity lower than 25000 USDT
+2. Compute the value of the token in USDT
+3. Multiply this value by the total supply of tokens
 
 So, as long as a token has more than 25000 USDT in his liquidity, we considere that it has a valid market
 cap to compute.
