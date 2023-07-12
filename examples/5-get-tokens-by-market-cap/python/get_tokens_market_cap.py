@@ -6,7 +6,7 @@ from blockchainapis import BlockchainAPIs
 from blockchainapis.models import Token
 
 def pretty_print_tokens(tokens: List[Token]):
-    """Print the given tokens in a pretty print way
+    """Print the given tokens inside of an array
 
     :param token: The list of tokens to print
     :type token: Token
