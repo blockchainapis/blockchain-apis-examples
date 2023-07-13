@@ -11,13 +11,11 @@ def pretty_print_reserves(reserves: List[Reserve]):
     :param reserves: The reserves returned by the API that we have to print
     :type reserves: List[Reserve]
     """
-    widths = [25, 42, 42, 23, 23]
-    print(f'| {"Exchange ID":<{widths[0]}} | {"Token0 Address":<{widths[1]}} | {"Token1 Address":<{widths[2]}} | {"Reserve0":<{widths[3]}} | {"Reserve1":<{widths[4]}} |')
-    print(f'| {"-" * widths[0]} | {"-" * widths[1]} | {"-" * widths[2]} | {"-" * widths[3]} | {"-" * widths[4]} |')
+    widths = [13, 25, 42, 42, 23, 23]
+    print(f'| {"Blockchain ID":<{widths[0]}} | {"Exchange ID":<{widths[1]}} | {"Token0 Address":<{widths[2]}} | {"Token1 Address":<{widths[3]}} | {"Reserve0":<{widths[4]}} | {"Reserve1":<{widths[5]}} |')
+    print(f'| {"-" * widths[0]} | {"-" * widths[1]} | {"-" * widths[2]} | {"-" * widths[3]} | {"-" * widths[4]} | {"-" * widths[5]} |')
     for reserve in reserves:
-        # You can also have the blockchain ID which we do not display here:
-        # print(reserve.blockchain)
-        print(f'| {reserve.exchange:<{widths[0]}} | {reserve.token0:<{widths[1]}} | {reserve.token1:<{widths[2]}} | {reserve.reserve0:<{widths[3]}} | {reserve.reserve1:<{widths[4]}} |')
+        print(f'| {reserve.blockchain:<{widths[0]}} | {reserve.exchange:<{widths[1]}} | {reserve.token0:<{widths[2]}} | {reserve.token1:<{widths[3]}} | {reserve.reserve0:<{widths[4]}} | {reserve.reserve1:<{widths[5]}} |')
 
 
 # We need to create an async function, because we can't do async calls in main Python thread.
