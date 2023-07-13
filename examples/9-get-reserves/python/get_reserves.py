@@ -32,7 +32,7 @@ async def get_reserves(blockchain: str, token0: str, token1: str):
         # available for the given pair on the given blockchain.
         # If you wish to get the reserves inside of only uniswapv2_ethereum for example,
         # you can call the `reserves` method this way:
-        # await blockchain_apis.reserves(blockchain=blockchain, token0=token0, token1=token1, exchange="uniswapv2_ethereum")
+        # reserves = await blockchain_apis.reserves(blockchain=blockchain, token0=token0, token1=token1, exchange="uniswapv2_ethereum")
 
         # Print the reserves in an array:
         pretty_print_reserves(reserves)
