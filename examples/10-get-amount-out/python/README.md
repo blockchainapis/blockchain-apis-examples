@@ -9,6 +9,9 @@ better performance.
 If you already have a Python project and you don't want to bother with
 async Python, you can use the [sync](get_amount_out_sync.py) version.
 
+Feel free to clone the repository and modify the examples to play with the API and
+learn how to use it.
+
 ## To run the example
 
 ### Install the dependencies:
