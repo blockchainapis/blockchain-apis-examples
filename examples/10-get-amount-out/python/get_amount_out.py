@@ -25,7 +25,7 @@ async def get_amount_out():
     # and create the instance the instance like this:
     # async with BlockchainAPIs(api_key) as blockchain_apis:
     async with BlockchainAPIs() as blockchain_apis:
-        amount_outs = await blockchain_apis.amount_out(
+        amounts_out = await blockchain_apis.amount_out(
             blockchain=BLOCKCHAIN,
             tokenIn=TOKEN_IN,
             tokenOut=TOKEN_OUT,
@@ -36,7 +36,7 @@ async def get_amount_out():
         token_out_decimals = await blockchain_apis.decimals(BLOCKCHAIN, TOKEN_OUT)
 
         # We loop to get all of the results
-        for amount_out in amount_outs:
+        for amount_out in amounts_out:
             print(f"{amount_out.exchange} will give you {blockchain_apis.get_token_decimal_form(amount_out.amountOut, token_out_decimals)} USDC")
 
 

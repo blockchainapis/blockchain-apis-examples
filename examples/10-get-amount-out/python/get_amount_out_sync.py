@@ -7,7 +7,7 @@ blockchain_apis = BlockchainAPIsSync()
 # blockchain_apis = BlockchainAPIsSync(api_key)
 
 # Do an API call in order to get the amount out
-amount_outs = blockchain_apis.amount_out(
+amounts_out = blockchain_apis.amount_out(
     # The blockchain on which you want the exchange to take place
     blockchain="ethereum",
     # The address of the token that we sell, here it is WETH address
@@ -17,12 +17,17 @@ amount_outs = blockchain_apis.amount_out(
     # The amount of tokenIn that we sell.
     # Here we sell 1 WETH.
     # We need to add 10**18 because WETH have 18 decimals.
-    amountIn=1 * 10**18
+    amountIn=1 * 10**18,
+    # You can optionally specify the id of the exchange on which you want the exchange to take
+    # place, for example if you want to test on Uniswap:
+    # exchange="uniswapv2_ethereum"
+    # If you don't specify this parameter, then by default, Blockchain APIs will give you the results
+    # for every exchange.
 )
 
 # We get the decimals of the tokenOut (in order to format the output):
 token_out_decimals = blockchain_apis.decimals("ethereum", "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48")
 
 # We loop to get all of the results
-for amount_out in amount_outs:
+for amount_out in amounts_out:
     print(f"{amount_out.exchange} will give you {blockchain_apis.get_token_decimal_form(amount_out.amountOut, token_out_decimals)} USDC")
