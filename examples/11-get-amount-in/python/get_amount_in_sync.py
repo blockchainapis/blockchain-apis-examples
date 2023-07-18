@@ -27,4 +27,6 @@ amounts_in = blockchain_apis.amount_in(
 
 # We loop to get all of the results
 for amount_in in amounts_in:
+    # We print with the decimal form.
+    # WETH have 18 decimals so we put 18 for the decimal form.
     print(f"In {amount_in.exchange} you will need {blockchain_apis.get_token_decimal_form(amount_in.amountIn, 18)} WETH in order to get 2000.00 USDC")

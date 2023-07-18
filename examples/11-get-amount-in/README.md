@@ -9,11 +9,14 @@ In this example, we will get the amount of ETH that is required in order to get
 Running the example should give you this output:
 
 ```
-dooar_ethereum will give you 1898.311704 USDC
-elk_finance_ethereum will give you 213.775165 USDC
-pancakeswap_ethereum will give you 1906.054373 USDC
-plasmafinance_ethereum will give you 94.209782 USDC
-shibaswap_ethereum will give you 1907.634462 USDC
-sushiswap_ethereum will give you 1933.364498 USDC
-uniswapv2_ethereum will give you 1935.204076 USDC
+In dooar_ethereum you will need 1.071419893150198561 WETH in order to get 2000.00 USDC
+In elk_finance_ethereum you will need 0 WETH in order to get 2000.00 USDC
+In pancakeswap_ethereum you will need 1.073992537197660008 WETH in order to get 2000.00 USDC
+In plasmafinance_ethereum you will need 0 WETH in order to get 2000.00 USDC
+In shibaswap_ethereum you will need 1.071930904276886242 WETH in order to get 2000.00 USDC
+In sushiswap_ethereum you will need 1.059925181087655307 WETH in order to get 2000.00 USDC
+In uniswapv2_ethereum you will need 1.059933556462899155 WETH in order to get 2000.00 USDC
 ```
+
+Please note that if you see "0", it means that there is not enough liquidity on the exchange
+in order to make the trade.
